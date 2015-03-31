@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^$', views.home_page),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/$', views.hello),
+    url(r'^time/$', views.current_datetime)
 )
