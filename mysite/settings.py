@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import os.path
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -36,7 +37,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.admin',
     'bbblog'
 )
 
@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'books',
+        'NAME': 'xiaochen',
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',
@@ -86,3 +86,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+TEMPLATE_DIRS = ('templates',
+)
