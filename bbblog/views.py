@@ -15,3 +15,12 @@ def hello(request):
 def current_datetime(request):
     now = datetime.datetime.now()
     return render_to_response('bbblog/current_datetime.html', {'current_date': now})
+
+def display_meta(request):
+    values = request.META.items()
+    values.sort()
+    html = []
+    print request
+    for k, v in values:
+        html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+        return HttpResponse('<table>%s</table>' % '\n'.join(html))

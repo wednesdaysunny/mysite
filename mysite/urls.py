@@ -11,6 +11,9 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', views.home_page),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^hello/$', views.hello),
-    url(r'^time/$', views.current_datetime)
-)
+    url(r'^hello/$', 'bbblog.views.hello'),
+    url(r'^time/$', 'bbblog.views.current_datetime'),
+    url(r'^meta/$', 'bbblog.views.display_meta'),
+    url(r'^searchform/$', 'books.views.search_form'),
+    url(r'^search/$', 'books.views.search'),
+    )
