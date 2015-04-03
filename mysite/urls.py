@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from django.contrib import admin
 from bbblog import views
@@ -17,3 +18,4 @@ urlpatterns = patterns('',
     url(r'^searchform/$', 'books.views.search_form'),
     url(r'^search/$', 'books.views.search'),
     )
+urlpatterns += staticfiles_urlpatterns()
