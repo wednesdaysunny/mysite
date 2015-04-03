@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Show You goods{% endblock %}
+{% block content %}
+    {% if goods %}
+        <p>Found {{ goods|length }} goods {{ goods|pluralize }}.</p>
+        <ul>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>price</th>
+                    <th>created at</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for gs in goods %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ gs.name }}</td>
+                        <td>{{ gs.description }}</td>
+                        <td>{{ gs.price }}</td>
+                        <td>{{ gs.created_at }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+    </ul>
+    {% else %}
+        <p>No goods now.</p>
+    {% endif %}
+{% endblock %}
