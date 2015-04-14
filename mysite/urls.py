@@ -17,6 +17,8 @@ urlpatterns = patterns('',
     url(r'^meta/$', 'bbblog.views.display_meta'),
     url(r'^searchform/$', 'books.views.search_form'),
     url(r'^search/$', 'books.views.search'),
+    url(r'^contact/$', 'books.views.contact'),
+    url(r'^contact/thanks/$', 'books.views.thanks'),
     url(r'^inputgood/$', 'manages.views.input_good'),
     url(r'^submitgood/$', 'manages.views.submit_good'),
     )
